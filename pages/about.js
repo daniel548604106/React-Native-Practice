@@ -15,7 +15,7 @@ import {
 
 import { globalStyles } from '../styles/global';
 
-const Home = ({ navigation }) => {
+const Home = () => {
   const [name, setName] = useState('daniel');
   const [person, setPerson] = useState({ name: 'mario' });
 
@@ -25,11 +25,13 @@ const Home = ({ navigation }) => {
     { name: 'shoiasdasdasdf', id: '3' },
     { name: 'shoisasdasddf', id: '4' },
     { name: 'shoisdassdadf', id: '5' },
+    { name: 'shoisdassdasdfsdfdf', id: '6' },
+    { name: 'shoisdasssdfsddadf', id: '7' },
+    { name: 'shoisdassdafsdfsdf', id: '8' },
+    { name: 'shoisdassddfadf', id: '9' },
+    { name: 'shoisdassdadf', id: '10' },
   ]);
 
-  const navigateToAboutPage = () => {
-    navigation.push('About');
-  };
   const clickHandler = () => {
     setName('new Name');
     Alert.alert('OOPS!', 'TODOS must be 3 ', [
@@ -47,8 +49,6 @@ const Home = ({ navigation }) => {
         <View style={globalStyles.header}>
           <Text>Open up App.js to start working on your app!</Text>
           <Text>{name}</Text>
-          <Button title="Go to about page" onPress={navigateToAboutPage} />
-
           <Text>{person.name}</Text>
           <TextInput
             style={globalStyles.input}
